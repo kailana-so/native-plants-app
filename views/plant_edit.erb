@@ -1,0 +1,284 @@
+<h2> edit the plant details</h2>
+
+<form action="/plants/<%= plant['id'] %>" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="plant_id" value="<%= plant['id'] %>">
+    
+    <%# name %>
+    <section>
+        <label for=""><h3>Name:</h3></label>
+        <input type="text" name="name" value="<%= plant['name'] %>">
+    </section>
+
+    <%# latin name %>
+    <section>
+        <label for=""><h3>Latin name:</h3></label>
+        <input type="text" name="latin_name" value="<%= plant['latin_name'] %>">
+    </section>
+
+    <%# description %>
+    <section>
+        <label for=""><h3>Description:</h3></label>
+        <textarea type="text" name="description" value="<%= plant['description'] %>"></textarea>
+    </section>
+
+    <%# family %>
+    <section>
+        <label for=""><h3>Family:</h3></label>
+        <input type="text" name="family" value="<%= plant['family'] %>">
+    </section>
+
+    <%# color %>
+    <section>
+        <h3>Colour:</h3>
+        <div>
+            <input type="radio" id="white" name="color" value="white">
+            <label for="white">White</label>
+        </div>
+
+        <div>
+            <input type="radio" id="yellow" name="color" value="yellow">
+            <label for="yellow">Yellow</label>
+        </div>
+
+        <div>
+            <input type="radio" id="orange" name="color" value="orange">
+            <label for="orange">Orange</label>
+        </div>
+
+        <div>
+            <input type="radio" id="red" name="color" value="red">
+            <label for="red">Red</label>
+        </div>  
+
+        <div>
+            <input type="radio" id="pink" name="color" value="pink">
+            <label for="pink">Pink</label>
+        </div>
+
+        <div>
+            <input type="radio" id="purple" name="color" value="purple">
+            <label for="purple">Purple</label>
+        </div>  
+
+        <div>
+            <input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Blue</label>
+        </div>
+
+        <div>
+            <input type="radio" id="black" name="color" value="black">
+            <label for="black">Black</label>
+        </div>
+
+    </section>
+
+    <%# petal shape %>
+    <section>
+        <h3>Corolla shape:</h3>
+
+        <section class="radio-grid">
+        
+            <div>
+        
+            <p><b>Polypetalous or Dialypetalous:</b> petals are free from one</p>
+            <p>Regular</p>
+            <div>
+                <input type="radio" id="cruciform" name="petal_shape" value="cruciform">
+                <label for="cruciform">Cruciform or star-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="caryophyllaceous" name="petal_shape" value="caryophyllaceous">
+                <label for="caryophyllaceous">Caryophyllaceous or five free petals</label>
+            </div> 
+
+            <div>
+                <input type="radio" id="rosaceous" name="petal_shape" value="rosaceous">
+                <label for="rosaceous">Rosaceous</label>
+            </div>  
+
+            <p>Irregular</p>
+
+            <div>
+                <input type="radio" id="papilionaceous" name="petal_shape" value="papilionaceous">
+                <label for="papilionaceous">Papilionaceous or butterfly-shaped</label>
+            </div> 
+            
+        </div>
+
+        <div>
+
+            <p><b>Gamopetalous or Sympetalous:</b> any degree of petal cohe­sion</p>
+            <p>Regular</p>
+
+            <div>
+                <input type="radio" id="tabular" name="petal_shape" value="tabular">
+                <label for="tabular">Tabular or tube-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="campanulate" name="petal_shape" value="campanulate">
+                <label for="campanulate">Campanulate or bell-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="infurdibuliform" name="petal_shape" value="infurdibuliform">
+                <label for="infurdibuliform">Infurdibuliform or funnel-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="hypocrateriform" name="petal_shape" value="hypocrateriform">
+                <label for="hypocrateriform">Hypocrateriform or salver-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="rotate" name="petal_shape" value="rotate">
+                <label for="rotate">Rotate or wheel-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="urceolate" name="petal_shape" value="urceolate">
+                <label for="urceolate">Urceolate or urn-shaped</label>
+            </div>
+
+            <p>Irregular</p>
+
+            <div>
+                <input type="radio" id="ligulate" name="petal_shape" value="ligulate">
+                <label for="ligulate">Ligulate or strap-shaped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="bilabiate" name="petal_shape" value="bilabiate">
+                <label for="bilabiate">Bilabiate or labiate or two-lipped</label>
+            </div>
+
+            <div>
+                <input type="radio" id="personate" name="petal_shape" value="personate">
+                <label for="personate">Personate or masked (enclosed)</label>
+            </div>
+        
+        </div>
+        
+        </section>
+
+    </section>
+
+    <%# leaf shape %>
+    <section>
+
+        <h3>Leaf shape:</h3>
+
+        <div>
+            <input type="radio" id="ovate" name="leaf_shape" value="ovate">
+            <label for="ovate">Ovate</label>
+        </div>
+
+         <div>
+            <input type="radio" id="cordate" name="leaf_shape" value="cordate">
+            <label for="cordate">Cordate</label>
+        </div>
+
+        <div>
+            <input type="radio" id="reniform" name="leaf_shape" value="reniform">
+            <label for="reniform">Reniform</label>
+        </div>
+
+        <div>
+            <input type="radio" id="elliptical" name="leaf_shape" value="elliptical">
+            <label for="elliptical">Elliptical</label>
+        </div>
+
+        <div>
+            <input type="radio" id="oblong" name="leaf_shape" value="oblong">
+            <label for="oblong">Oblong</label>
+        </div>
+
+        <div>
+            <input type="radio" id="linear" name="leaf_shape" value="linear">
+            <label for="linear">Linear</label>
+        </div>
+
+        <div>
+            <input type="radio" id="spathulate" name="leaf_shape" value="spathulate">
+            <label for="spathulate">Spathulate</label>
+        </div>
+
+    </section>
+
+    <%# leaf margin %>
+    <section>
+
+        <h3>Leaf margin:</h3>
+
+        <div>
+            <input type="radio" id="dentate" name="leaf_margin" value="dentate">
+            <label for="dentate">Dentate</label>
+        </div>
+
+        <div>
+            <input type="radio" id="serrate" name="leaf_margin" value="serrate">
+            <label for="serrate">Serrate</label>
+        </div>
+
+        <div>
+            <input type="radio" id="crenate" name="leaf_margin" value="crenate">
+            <label for="crenate">Crenate</label>
+        </div>  
+
+        <div>
+            <input type="radio" id="sinuate" name="leaf_margin" value="sinuate">
+            <label for="sinuate">Sinuate</label>
+        </div>
+
+        <div>
+            <input type="radio" id="digitate" name="leaf_margin" value="digitate">
+            <label for="digitate">Digitate</label>
+        </div>
+
+        <div>
+            <input type="radio" id="pinnate" name="leaf_margin" value="pinnate">
+            <label for="pinnate">Pinnate</label>
+        </div>
+
+    </section>
+
+    <%# location %>
+    <section>
+        <label for=""><h3>Location:</h3></label>
+        <input type="text" name="location" value="<%= plant['location'] %>">
+    </section>
+
+    <%# plant status %>
+    <section>
+
+        <h3>Plant status:</h3>
+
+        <div>
+            <input type="radio" id="rare" name="plant_status" value="rare">
+            <label for="rare">Rare</label>
+        </div>
+
+        <div>
+            <input type="radio" id="disappearing" name="plant_status" value="disappearing">
+            <label for="disappearing">Disappearing</label>
+        </div>
+
+        <div>
+            <input type="radio" id="abundant" name="plant_status" value="abundant">
+            <label for="abundant">Abundant</label>
+        </div>
+          
+    </section>
+
+    <%# image url %>
+    <section>
+        <label for=""><h3>Upload a picture</h3></label>
+        <%# <input type="text" name="image_url"> %>
+        <input type="file" name="image_url">
+
+    </section>
+
+    <button class="form-btn">save changes</button>
+</form>

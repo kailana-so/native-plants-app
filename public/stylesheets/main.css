@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("/fonts/GlacialIndifference-Bold.otf") format("otf"),
+         url("/fonts/GlacialIndifference-Italic.otf") format("otf"),
+         url("/fonts/GlacialIndifference-Regular.otf") format("otf"),
+         url("/fonts/GlacialIndifference-Bold.woff") format("woff"),
+         url("/fonts/GlacialIndifference-Italic.woff") format("woff"),
+         url("/fonts/GlacialIndifference-Regular.woff") format("woff"),
+         url("/fonts/GlacialIndifference-Bold.ttf") format("ttf"),
+         url("/fonts/GlacialIndifference-Italic.ttf") format("ttf"),
+         url("/fonts/GlacialIndifference-Regular.ttf") format("ttf");
+}
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 5% 5% 0 5%;
+    display: grid;
+    background-color: #fcf8e8;
+}
+
+h1, h2, h3, h4, h5, a, button {
+    font-family: "Glacial Indifference";
+    font-weight: bold;
+}
+
+.title {
+    font-size: 52px;
+    color: #ECB390;
+}
+
+h2 {
+    margin-bottom: 3%;
+}
+
+p, form, a>p {
+    font-family: "Glacial Indifference";
+    font-weight: regular;
+    font-weight: lighter;
+    color: black;
+}
+
+.user-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #DF7861;
+}
+
+.user-toggle {
+    color:gray;
+}
+
+a.user-toggle {
+    padding: 0 10px;
+    color: #DF7861;
+}
+
+.app-btns {
+    border-bottom: 10px solid #fff;
+    color: #DF7861;
+}
+
+.btn {
+    background-color: #ecdfc8;
+    padding: 1.5%;
+    border-radius: 15px;
+    color: #DF7861;
+}
+
+.form-btn {
+    background-color: #ecdfc8;
+    padding: 11px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    color: #DF7861;
+    margin-top: 3%;
+}
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12.5% 5%;
+    align-items: center;
+    margin-bottom: 10%;
+
+}
+
+.plant-card {
+    text-align: center;
+    margin: 7.5% 0;
+}
+
+.plant-card>img {
+    width: 100%;
+}
+
+.plant-card>h3{
+    position: relative;
+    margin: -20%;
+    color: #fff;
+    font-size:medium;
+}
+
+.plant-details>img {
+    margin: 10% 0 0 0;
+    width: 100%;
+    opacity: 85%;
+}
+
+a {
+    text-decoration: none;
+    color: #DF7861;
+}
+
+section>a:hover {
+    opacity: 55%;
+}
+
+input {
+    border: 1px solid gray;
+}
+
+form>section, form>div {
+    display: block;
+    margin: 2.5% 0;
+    
+}
+form>section>h3, form>section>label {
+    color: #DF7861;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.user-listings {
+    border-left: 10px solid #fff;
+}
+.user-listings>p, .user-listings>a>p  {
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 15%;
+    text-align: left;
+    color:  gray;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 767px) {
+
+    body {
+        padding: 5% 10% 0 5%;
+        display: grid;
+        background-color: #fcf8e8;
+    }
+
+    .title {
+        font-size: 102px;
+    }
+
+    .plant-details>img {
+        width: 60%;
+    }
+
+    .radio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .plant-card>h3{
+        position: relative;
+        margin: -20%;
+        color: #fff;
+        font-size: xx-large;
+    }
+    .plant-card {
+        text-align: center;
+        margin: 10% 0;
+    }
+
+
+}
+
+
+
+
+
+

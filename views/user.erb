@@ -1,0 +1,16 @@
+<section class="plant-list">
+
+    <% plants.each do |plant| %>
+
+        <div class="user-listings">
+
+            
+            <a href="/plants/<%= plant['id'] %>">
+                <p> <%= plant['name'] %>, <%= plant['location'] %> <p>
+            </a>
+            <p> <%= plant['image_timestamp'] %> </p> 
+        </div>
+    
+    <% end %>
+
+</section>

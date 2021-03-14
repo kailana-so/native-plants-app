@@ -1,0 +1,34 @@
+<section class="plant-details">
+
+    <%= cl_image_tag(plant['image_url'], cloud_name:'dllaf2k6c')%>
+
+    <section>
+        <h2> <%= plant['name'] %> </h2>
+        <h4> <%= plant['family'] %> </h4>
+        <h5> This species is considered <%= plant['plant_status'] %> </h5>
+
+
+        <p> 
+            <%= plant['description'] %>  
+        </p>
+
+        <p> 
+            This species can be identified by its <%= plant['leaf_margin']%> leaf margins and <%= plant['leaf_shape']%> corolla shape
+        </p>
+
+        <h5> This species was spotted in <%= plant['location'] %> </h5>
+    </section>
+
+    <!---if logged in? && user id matchs plant user id
+    user can delete/edit their own plants --->
+    <% if logged_in? && current_user()['id'] == plant['user_id'] %>
+        <a class="btn" href="/plants/<%= plant['id'] %>/edit"> Edit </a>
+
+
+        <form action="/plants/<%= plant['id'] %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button class="form-btn">Delete</button>
+        </form>
+    <% end %>
+
+</section>

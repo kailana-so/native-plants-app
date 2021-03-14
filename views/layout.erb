@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EC/ID</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+  <div class="user-btns">
+
+    <% if logged_in? %>
+      <div>
+          <p> Welcome back, <a href="/user"><%= current_user()['username'] %></a></p>
+      </div>
+      <form action="/sessions" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button class="form-btn"> log&nbsp;out </button>
+      </form>
+    <% else %>
+      <a href="/sign_up" class="btn"> sign up</a>
+      <a href="/login" class="btn"> log in</a>
+    <% end %> 
+
+  </div>
+  
+  <div>
+    <a href="/">
+      <h1 class="title">Native Flowers of the East Coast</h1>
+    </a>
+  </div>
+  <div class="menu">
+      <a href="/about"> 
+          <h2 class="app-btns">about</h2> 
+      </a>
+      <a href="/plants"> 
+          <h2 class="app-btns">submit a plant</h2> 
+      </a>
+  </div>
+
+
+</nav>
+
+  <%= yield %>
+
+
+  <footer>
+      <h5>We acknowledge the Traditional Custodians of country throughout Australia and their continued connection to land, sea and community. We pay our respect to elders past, present and emerging.</h5>
+  </footer>
+  <script src="javascripts/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+
+<section class="plant-grid">
+
+    <% plants.each do |plant| %>
+
+        <a href="/plants/<%= plant['id'] %>">
+        
+            <div class="plant-card">
+
+
+                <%# <%= cl_image_tag(plant['image_url'], cloud_name:'dllaf2k6c')%>
+
+                <%= cl_image_tag(plant['image_url'],:transformation=>[
+  {:width=>400, :height=>350, :gravity=>"face", :crop=>"crop"}], cloud_name:'dllaf2k6c') %>
+                
+              <h3> <%= plant['name'] %> </h3> 
+            </div>
+
+        </a>
+    
+    <% end %>
+
+</section>
